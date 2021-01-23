@@ -4,8 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <link href="./static/css/layout.css">
 </head>
+
+<style>
+.flexbox {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+#wrapper { 
+    justify-content: center;
+    align-items: center;
+}
+</style>
+
 <body>
-    
+    <div id="wrapper" class="flexbox">
+        <div id="clock">
+            <p class="days"></p>
+            <p class="hours"></p>
+            <p class="minutes"></p>
+            <p class="seconds"></p>
+        </div>
+    </div>
+
+    <script src="static/js/ui.js"></script>
 </body>
 </html>

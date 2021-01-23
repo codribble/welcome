@@ -1,0 +1,13 @@
+@charset "utf-8";
+
+.flexbox {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+
+#wrapper { 
+    justify-content: center;
+    align-items: center;
+}
