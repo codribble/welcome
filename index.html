@@ -15,10 +15,10 @@
 </style>
 
 <body>
-    <div id="wrapper">
+    <div id="wrapper" class="flexbox">
         <div id="clock">
             <p class="days"></p>
-            <div class="timer clearfix">
+            <div class="timer flexbox">
                 <p class="hours"></p>
                 <p class="colon">:</p>
                 <p class="minutes"></p>
@@ -26,8 +26,18 @@
                 <p class="seconds"></p>
             </div>
         </div>
+
+        <form id="askName" autocomplete="off">
+            <label for="name">
+                <input type="text" id="name" placeholder="What your name?" />
+                <span>What your name?</span>
+            </label>
+        </form>
     </div>
 
-    <script src="./static/js/ui.js"></script>
+    <script src="./static/js/clock.js"></script>
+    <script src="./static/js/whatyourname.js"></script>
+    <script src="./static/js/todo.js"></script>
+    <script src="./static/js/weather_background.js"></script>
 </body>
 </html>
