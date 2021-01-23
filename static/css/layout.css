@@ -18,6 +18,6 @@ body { overflow:hidden; width:100%; height:100vh; font-family:"Montserrat", sans
 
 #askName { width:100%; max-width:400px; }
 #askName label { display:block; position:relative; }
-#askName input { display:block; width:100%; height:50px; padding:0 20px; border:0; border-bottom:1px solid #000; font-family:inherit; font-size:20px; text-align:center; outline:none; }
-#askName span { display:block; position:absolute; top:50%; left:50%; font-size:20px; color:#ccc; opacity:0; pointer-events:none; transform:translate(-50%, -50%); }
-#askName input.on + span { top:0; left:0; transform:translate(0, calc(-100% - 10px)); font-size:14px; opacity:1; transition:all .3s; }
+#askName input { display:block; width:100%; height:50px; padding:0 20px; background-color:transparent; border:0; border-bottom:1px solid #000; font-family:inherit; font-size:20px; text-align:center; outline:none; }
+#askName span { display:block; position:absolute; top:50%; left:50%; font-size:20px; color:#ddd; z-index:-1; pointer-events:none; transform:translate(-50%, -50%); transition:all .3s; }
+#askName input.on + span { top:0; left:0; transform:translate(0, calc(-100% - 10px)); font-size:14px;  }
