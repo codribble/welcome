@@ -16,10 +16,10 @@ function clockTimer(){
         const minute = date.getMinutes();
         const second = date.getSeconds();
 
-        daysWrap.innerText = `${year}.${month}.${day}`;
-        hoursWrap.innerText = `${hour}`;
-        minutesWrap.innerText = `${minute}`;
-        secondsWrap.innerText = `${second}`;
+        daysWrap.innerText = `${year}.${month < 10 ? `0${month}` : month}.${day < 10 ? `0${day}` : day}`;
+        hoursWrap.innerText = `${hour < 10 ? `0${hour}` : hour}`;
+        minutesWrap.innerText = `${minute < 10 ? `0${minute}` : minute}`;
+        secondsWrap.innerText = `${second < 10 ? `0${second}` : second}`;
     }
 
     getTime();

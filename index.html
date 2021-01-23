@@ -5,29 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <link href="./static/css/layout.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link href="static/css/layout.css" rel="stylesheet">
 </head>
 
 <style>
-.flexbox {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-}
 
-#wrapper { 
-    justify-content: center;
-    align-items: center;
-}
 </style>
 
 <body>
-    <div id="wrapper" class="flexbox">
+    <div id="wrapper">
         <div id="clock">
             <p class="days"></p>
-            <p class="hours"></p>
-            <p class="minutes"></p>
-            <p class="seconds"></p>
+            <div class="timer clearfix">
+                <p class="hours"></p>
+                <p class="colon">:</p>
+                <p class="minutes"></p>
+                <p class="colon">:</p>
+                <p class="seconds"></p>
+            </div>
         </div>
     </div>
 
