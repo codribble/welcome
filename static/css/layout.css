@@ -15,9 +15,11 @@ body { overflow:hidden; width:100%; height:100vh; font-family:"Montserrat", sans
 #clock .days { font-weight:700; }
 #clock .timer { justify-content:space-around; align-items:center; }
 #clock .timer p { font-weight:500; }
+#clock .timer p:not(.colon) { width:calc(33.33% - 30px); }
+#clock .timer .colon { width:15px; }
 
 #askName { width:100%; max-width:400px; }
 #askName label { display:block; position:relative; }
-#askName input { display:block; position:relative; width:100%; height:50px; padding:0 20px; background-color:transparent; border:0; border-bottom:1px solid #000; font-family:inherit; font-size:20px; text-align:center; outline:none; z-index:1;; }
+#askName input { display:block; position:relative; width:100%; height:50px; padding:0 20px; background-color:transparent; border:0; border-bottom:1px solid #000; font-family:inherit; font-size:20px; text-align:center; outline:none; z-index:1; }
 #askName span { display:block; position:absolute; top:50%; left:50%; font-size:20px; color:#ddd; white-space:nowrap; z-index:0; pointer-events:none; transform:translate(-50%, -50%); transition:all .3s; }
 #askName input.on + span { top:0; left:0; transform:translate(0, calc(-100% - 10px)); font-size:14px;  }
