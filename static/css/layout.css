@@ -2,12 +2,14 @@
 
 
 body { overflow:hidden; width:100%; height:100vh; font-family:"Montserrat", sans-serif; }
+ul { list-style:none; }
 
 *, *:before, *:after { margin:0; padding:0; box-sizing:border-box; }
 
 .flexbox { display: -webkit-box; display: -ms-flexbox; display: flex; }
 .clearfix:after { content:''; display:block; clear:both; }
 
+.form-input { display:block; position:relative; width:100%; height:50px; padding:0 20px; background-color:transparent; border:0; border-bottom:1px solid #000; font-family:inherit; font-size:20px; text-align:center; outline:none; z-index:1; }
 
 #wrapper { position:relative; justify-content: center; align-items: center; width:100%; height:100%; }
 
@@ -20,6 +22,18 @@ body { overflow:hidden; width:100%; height:100vh; font-family:"Montserrat", sans
 
 #askName { width:100%; max-width:400px; }
 #askName label { display:block; position:relative; }
-#askName input { display:block; position:relative; width:100%; height:50px; padding:0 20px; background-color:transparent; border:0; border-bottom:1px solid #000; font-family:inherit; font-size:20px; text-align:center; outline:none; z-index:1; }
 #askName span { display:block; position:absolute; top:50%; left:50%; font-size:20px; color:#ddd; white-space:nowrap; z-index:0; pointer-events:none; transform:translate(-50%, -50%); transition:all .3s; }
 #askName input.on + span { top:0; left:0; transform:translate(0, calc(-100% - 10px)); font-size:14px;  }
+
+#toDo { width:100%; max-width:400px; text-align:center; }
+#toDo .intro { margin-bottom:30px; font-size:30px; }
+#myTask { margin-top:30px; }
+#myTask div { width:50%; }
+#myTask div strong { display:block; margin-bottom:20px; }
+#myTask ul li { padding:10px; text-align:left; }
+#myTask button { display:inline-block; position:relative; width:20px; height:20px; margin-right:5px; background-color:#fff; border:1px solid #000; vertical-align:middle; cursor:pointer; }
+button[id*=del]:before, button[id*=del]:after { content:''; display:block; position:absolute; top:50%; left:4px; width:10px; height:1px; margin-top:-.5px; background-color:#000; }
+button[id*=del]:before { transform:rotate(-45deg); }
+button[id*=del]:after { transform:rotate(45deg); }
+button[id*=fin]:after { content:''; display:block; position:absolute; top:50%; left:50%; width:8px; height:8px; margin-top:-4px; border-left:1px solid #000; border-bottom:1px solid #000; transform-origin:left bottom; transform:rotate(-45deg) skew(-10deg, -10deg); }
+#myTask .finishedList button[id*=fin]:after { margin-top:-6px; transform-origin:left center; transform:rotate(45deg) skew(-10deg, -10deg); } 

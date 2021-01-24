@@ -1,4 +1,5 @@
-const form = document.getElementById('askName');
+const askName = document.getElementById('askName');
+const askNameForm = document.getElementById('askNameForm');
 const toDo = document.getElementById('toDo');
 const intro = toDo.querySelector('.intro');
 const somethingName = document.getElementById('name');
@@ -18,12 +19,12 @@ function whoareyou(){
     const yourName = localStorage.getItem(NAME_LS);
 
     if( yourName === null ){
-        form.style.display = 'block';
+        askName.style.display = 'block';
         toDo.style.display = 'none';
     }else{
-        form.style.display = 'none';
+        askName.style.display = 'none';
         toDo.style.display = 'block';
-        intro.innerText = `Welcome! ${yourName}!`;
+        intro.innerHTML = `Welcome! <strong>${yourName}!</strong>`;
     }
 }
 
@@ -36,7 +37,7 @@ function handleMemoryName(){
 function init(){
     whoareyou();
 
-    form.addEventListener('submit', handleMemoryName);
+    askNameForm.addEventListener('submit', handleMemoryName);
     somethingName.addEventListener('keyup', handleName);
 }
 

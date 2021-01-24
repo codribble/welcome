@@ -27,19 +27,38 @@
             </div>
         </div>
 
-        <form id="askName" autocomplete="off">
-            <label for="name">
-                <input type="text" id="name" />
-                <span>What is your name?</span>
-            </label>
-        </form>
+        <div id="askName">
+            <form id="askNameForm" autocomplete="off">
+                <label for="name">
+                    <input type="text" id="name" class="form-input" />
+                    <span>What is your name?</span>
+                </label>
+
+                <button type="submit">Enter</button>
+            </form>
+        </div>
 
         <div id="toDo">
             <p class="intro"></p>
 
             <form id="toDoForm" autocomplete="off">
-                <input type="text" id="toDoInput" />
+                <input type="text" id="toDoInput" class="form-input" placeholder="Please enter something to do." />
             </form>
+
+            <div id="myTask" class="flexbox">
+                <div class="pending">
+                    <strong>To Do List</strong>
+
+                    <ul class="pendingList"></ul>
+                </div>
+                
+
+                <div class="finished">
+                    <strong>Completion List</strong>
+
+                    <ul class="finishedList"></ul>
+                </div>
+            </div>
         </div>
     </div>
 
