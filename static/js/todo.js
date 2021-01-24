@@ -68,7 +68,6 @@ function deleteToDo(e){
     }else{  
       pendingList.removeChild(li);
       finishedList.appendChild(li);
-      const finishedBtn = finishedList.querySelector('.btn')
     
       const cleanToDos = pending.filter(function(pending){
         return pending.id !== parseInt(li.id);
