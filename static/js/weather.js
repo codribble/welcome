@@ -51,7 +51,7 @@ function getWeather(lat, lng){
         }
         
         wrapper.classList.add(descriptionTrim);
-        weather.innerHTML = `<img src="http://openweathermap.org/img/wn/${weatherIcon}@2x.png" alt="${description}"> ${txt}<br />${temperature}&deg;C`;
+        weather.innerHTML = `<img src="http://openweathermap.org/img/wn/${weatherIcon}@2x.png" alt="${description}"> ${description}<br />${temperature}&deg;C`;
     });
 }
 
