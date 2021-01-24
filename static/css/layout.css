@@ -9,17 +9,22 @@ ul { list-style:none; }
 .flexbox { display: -webkit-box; display: -ms-flexbox; display: flex; }
 .clearfix:after { content:''; display:block; clear:both; }
 
-.form-input { display:block; position:relative; width:100%; height:50px; padding:0 20px; background-color:transparent; border:0; border-bottom:1px solid #000; font-family:inherit; font-size:20px; text-align:center; outline:none; z-index:1; }
+.widget { width:100%; max-width:500px; padding:30px; background-color:rgba(255,255,255,.6); }
 
-#wrapper { position:relative; justify-content: center; align-items: center; width:100%; height:100%; }
-#wrapper.clearsky { background-image:url(); }
-#wrapper[class*=clouds] { background-image:url(); }
-#wrapper[class*=rain] { background-image:url(); }
-#wrapper.thunderstorm { background-image:url(); }
-#wrapper.snow { background-image:url(); }
-#wrapper.mist { background-image:url(); }
+.form-input { display:block; position:relative; width:100%; height:50px; padding:0 20px; background-color:transparent; border:0; border-bottom:1px solid #000; font-family:inherit; font-size:20px; color:#000; text-align:center; outline:none; z-index:1; }
+.form-input::placeholder { color:#000; }
 
-#clock { position:absolute; top:0; right:0; padding:30px 50px; font-size:50px; text-align:right; }
+.bgImage { position:absolute; top:0; left:0; width:100%; height:auto; z-index:-1; }
+
+#wrapper { position:relative; justify-content: center; align-items: center; width:100%; height:100%;  background-position:center; background-repeat:no-repeat; background-size:cover; }
+#wrapper.clearsky { background-image:url('https://images.unsplash.com/photo-1605519219955-5733e54fd420?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80'); }
+#wrapper[class*=clouds] { background-image:url('https://images.unsplash.com/photo-1462802061423-2028290f3d7b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1267&q=80'); }
+#wrapper[class*=rain] { background-image:url('https://images.unsplash.com/photo-1523772721666-22ad3c3b6f90?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'); }
+#wrapper.thunderstorm { background-image:url('https://images.unsplash.com/photo-1587228270638-2c0ac062c01a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'); }
+#wrapper.snow { background-image:url('https://images.unsplash.com/photo-1514583228371-3da8bd8d6aba?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'); }
+#wrapper.mist { background-image:url('https://images.unsplash.com/photo-1585884074756-cf22b2ef5cb8?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'); }
+
+#clock { position:absolute; top:0; right:0; padding:30px 50px; background-color:rgba(255,255,255,.6); font-size:50px; text-align:right; }
 #clock .days { font-weight:700; }
 #clock .timer { justify-content:space-around; align-items:center; }
 #clock .timer p { font-weight:500; }
@@ -28,13 +33,14 @@ ul { list-style:none; }
 
 #clock .weather { font-size:25px; }
 #clock .weather img { display:inline-block; width:auto; height:25px; vertical-align:middle;; }
+#clock .weather span { position:fixed; top:0; left:0; padding:20px; background-color:#fff; font-size:15px; color:#ff0000; }
 
-#askName { width:100%; max-width:400px; }
+#askName {  }
 #askName label { display:block; position:relative; }
-#askName span { display:block; position:absolute; top:50%; left:50%; font-size:20px; color:#ddd; white-space:nowrap; z-index:0; pointer-events:none; transform:translate(-50%, -50%); transition:all .3s; }
-#askName input.on + span { top:0; left:0; transform:translate(0, calc(-100% - 10px)); font-size:14px;  }
+#askName span { display:block; position:absolute; top:50%; left:50%; font-size:20px; white-space:nowrap; z-index:0; pointer-events:none; transform:translate(-50%, -50%); transition:all .3s; }
+#askName input.on + span { top:0; left:0; transform:translate(0, -100%); font-size:14px;  }
 
-#toDo { width:100%; max-width:400px; text-align:center; }
+#toDo { text-align:center; }
 #toDo .intro { margin-bottom:30px; font-size:30px; }
 #myTask { margin-top:30px; }
 #myTask div { width:50%; }
