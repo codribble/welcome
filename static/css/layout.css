@@ -12,6 +12,12 @@ ul { list-style:none; }
 .form-input { display:block; position:relative; width:100%; height:50px; padding:0 20px; background-color:transparent; border:0; border-bottom:1px solid #000; font-family:inherit; font-size:20px; text-align:center; outline:none; z-index:1; }
 
 #wrapper { position:relative; justify-content: center; align-items: center; width:100%; height:100%; }
+#wrapper.clearsky { background-image:url(); }
+#wrapper[class*=clouds] { background-image:url(); }
+#wrapper[class*=rain] { background-image:url(); }
+#wrapper.thunderstorm { background-image:url(); }
+#wrapper.snow { background-image:url(); }
+#wrapper.mist { background-image:url(); }
 
 #clock { position:absolute; top:0; right:0; padding:30px 50px; font-size:50px; text-align:right; }
 #clock .days { font-weight:700; }
@@ -19,6 +25,9 @@ ul { list-style:none; }
 #clock .timer p { font-weight:500; }
 #clock .timer p:not(.colon) { width:calc(33.33% - 30px); }
 #clock .timer .colon { width:15px; }
+
+#clock .weather { font-size:25px; }
+#clock .weather img { display:inline-block; width:auto; height:25px; vertical-align:middle;; }
 
 #askName { width:100%; max-width:400px; }
 #askName label { display:block; position:relative; }

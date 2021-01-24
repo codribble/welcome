@@ -4,7 +4,7 @@ const toDo = document.getElementById('toDo');
 const intro = toDo.querySelector('.intro');
 const somethingName = document.getElementById('name');
 
-const NAME_LS = 'name';
+const NAME_LS = 'userName';
 
 function handleName(e){
     const name = e.target.value;
